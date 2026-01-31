@@ -85,6 +85,15 @@ export default function LandingPage() {
             로그인, 결제, 댓글 없이 핵심 흐름만 구현한 MVP. 선택에 따라 다음
             에피소드가 분기되는 구조를 검증합니다.
           </p>
+          <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/70">
+            <p className="font-semibold text-white">GEO 최적화 전략 공개</p>
+            <p className="mt-2">
+              생성형 AI 검색에서 추천되는 콘텐츠 구조와 체크리스트를 정리했습니다.
+            </p>
+            <Link href="/geo" className="mt-3 inline-flex text-white underline">
+              GEO 가이드 보기 →
+            </Link>
+          </div>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href="/feed"

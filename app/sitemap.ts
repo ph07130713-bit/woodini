@@ -17,6 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
     },
     {
+      url: `${siteUrl}/geo`,
+      lastModified,
+    },
+    {
       url: `${siteUrl}/episodes/1`,
       lastModified,
     },
