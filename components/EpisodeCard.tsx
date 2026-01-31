@@ -10,6 +10,13 @@ export default function EpisodeCard({ episode }: { episode: Episode }) {
       <div
         className={`relative aspect-[3/4] w-full overflow-hidden rounded-2xl ${episode.poster}`}
       >
+        {episode.posterSrc ? (
+          <img
+            src={episode.posterSrc}
+            alt={`${episode.title} 썸네일`}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : null}
         <div className="absolute inset-0 bg-black/20" />
         <span className="absolute left-3 top-3 rounded-full bg-white/20 px-2 py-1 text-[10px] text-white">
           {episode.durationSec}s

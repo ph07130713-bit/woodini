@@ -13,6 +13,7 @@ export type Episode = {
   tags: string[];
   poster: string;
   videoSrc: string;
+  posterSrc?: string;
   choices: Choice[];
 };
 

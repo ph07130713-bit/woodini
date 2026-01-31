@@ -19,6 +19,7 @@ export const episodes: Episode[] = [
     tags: ["미스터리", "스릴러", "1분"],
     poster: "bg-gradient-to-br from-orange-500 via-amber-400 to-yellow-300",
     videoSrc: "/bulryun-short.mp4",
+    posterSrc: "/bulryun-short-thumb.jpg",
     choices: [
       { id: "call", label: "바로 전화를 건다", nextEpisodeId: "ep-2" },
       { id: "trace", label: "번호를 추적한다", nextEpisodeId: "ep-3" },
