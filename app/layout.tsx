@@ -1,11 +1,66 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
+import { siteConfig, siteUrl } from "../lib/seo";
 
 export const metadata: Metadata = {
-  title: "My Drama Lab | 선택형 숏드라마 테스트",
-  description:
-    "7일 안에 선택형 숏드라마를 테스트할 수 있는 MVP 랜딩 및 데모.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "My Drama Lab | 선택형 숏드라마 MVP",
+    template: "%s | My Drama Lab",
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  alternates: {
+    languages: {
+      "ko-KR": "/",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    title: "My Drama Lab | 선택형 숏드라마 MVP",
+    description: siteConfig.description,
+    url: "/",
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "My Drama Lab 선택형 숏드라마 MVP",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "My Drama Lab | 선택형 숏드라마 MVP",
+    description: siteConfig.description,
+    images: ["/twitter-image"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/icon.png",
+  },
+  verification: {
+    google: "fSKSN5okvjyIHd4O1iCS0_eCKJwBRachc5cxq23r-Ck",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0a0a0a",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({

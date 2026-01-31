@@ -1,9 +1,58 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { landingHighlights } from "../lib/data/seed";
+import { siteConfig, toAbsoluteUrl } from "../lib/seo";
+
+export const metadata: Metadata = {
+  title: "선택형 숏드라마 MVP",
+  description:
+    "선택형 숏드라마를 7일 안에 검증하는 모바일 퍼스트 MVP. 로그인·결제·댓글 없이 핵심 흐름만 체험하세요.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "선택형 숏드라마 MVP",
+    description:
+      "선택형 숏드라마를 7일 안에 검증하는 모바일 퍼스트 MVP. 로그인·결제·댓글 없이 핵심 흐름만 체험하세요.",
+    url: "/",
+    type: "website",
+  },
+  twitter: {
+    title: "선택형 숏드라마 MVP",
+    description:
+      "선택형 숏드라마를 7일 안에 검증하는 모바일 퍼스트 MVP. 로그인·결제·댓글 없이 핵심 흐름만 체험하세요.",
+  },
+};
 
 export default function LandingPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: siteConfig.name,
+        url: toAbsoluteUrl("/"),
+      },
+      {
+        "@type": "WebSite",
+        name: siteConfig.name,
+        url: toAbsoluteUrl("/"),
+        inLanguage: siteConfig.language,
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${toAbsoluteUrl("/feed")}?q={search_term_string}`,
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
+      <Script id="schema-org" type="application/ld+json">
+        {JSON.stringify(jsonLd)}
+      </Script>
       <header className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-6">
         <div className="flex items-center gap-3">
           <div className="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-orange-500 to-amber-300 text-xs font-bold text-black">

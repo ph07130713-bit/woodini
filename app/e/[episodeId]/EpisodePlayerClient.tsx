@@ -81,6 +81,8 @@ export default function EpisodePlayerClient({
               loop={false}
               poster="/poster.png"
               src="/sample.mp4"
+              aria-label={`${episode.title} 예고편 영상`}
+              title={episode.title}
             />
             <div className="absolute left-4 top-4 rounded-full bg-white/20 px-3 py-1 text-xs">
               {episode.subtitle}

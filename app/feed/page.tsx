@@ -1,5 +1,27 @@
+import type { Metadata } from "next";
 import { feedRows, episodes } from "../../lib/data/seed";
 import FeedRow from "../../components/FeedRow";
+
+export const metadata: Metadata = {
+  title: "오늘의 피드",
+  description:
+    "지금 뜨는 선택형 숏드라마를 모아본 오늘의 피드. 시리즈별로 빠르게 탐색하세요.",
+  alternates: {
+    canonical: "/feed",
+  },
+  openGraph: {
+    title: "오늘의 피드",
+    description:
+      "지금 뜨는 선택형 숏드라마를 모아본 오늘의 피드. 시리즈별로 빠르게 탐색하세요.",
+    url: "/feed",
+    type: "website",
+  },
+  twitter: {
+    title: "오늘의 피드",
+    description:
+      "지금 뜨는 선택형 숏드라마를 모아본 오늘의 피드. 시리즈별로 빠르게 탐색하세요.",
+  },
+};
 
 export default function FeedPage() {
   return (
@@ -12,6 +34,8 @@ export default function FeedPage() {
         <div className="flex items-center gap-2">
           <input
             placeholder="작품, 배우, 키워드"
+            type="search"
+            aria-label="작품, 배우, 키워드 검색"
             className="w-40 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs"
           />
           <button className="rounded-full border border-white/20 px-4 py-2 text-xs">
