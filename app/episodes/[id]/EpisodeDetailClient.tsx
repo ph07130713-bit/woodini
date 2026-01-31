@@ -15,8 +15,8 @@ const episodeMap: Record<
   }
 > = {
   "1": {
-    title: "사라진 클립",
-    subtitle: "EP.01 낯선 번호의 통화",
+    title: "불륜",
+    subtitle: "EP.01 아내 몰래",
     duration: "00:58",
     tags: ["미스터리", "스릴러", "1분"],
     synopsis:

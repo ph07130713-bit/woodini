@@ -6,8 +6,8 @@ export const dynamicParams = false;
 export const generateStaticParams = () => [{ id: "1" }];
 
 const episodeSeo = {
-  title: "사라진 클립",
-  subtitle: "EP.01 낯선 번호의 통화",
+  title: "불륜",
+  subtitle: "EP.01 아내 몰래",
   synopsis:
     "자정, 3초짜리 영상이 도착한다. 마지막 프레임 속 번호는 이미 지워진 제작사와 연결되어 있다.",
 };

@@ -2,7 +2,7 @@ import type { Episode, FeedRow } from "../types";
 
 export const series = {
   id: "series-1",
-  title: "사라진 클립",
+  title: "불륜",
   summary: "3초짜리 영상이 부른 미스터리",
   cover: "bg-gradient-to-br from-orange-500 via-amber-400 to-yellow-300",
   category: "미스터리",
@@ -11,8 +11,8 @@ export const series = {
 export const episodes: Episode[] = [
   {
     id: "ep-1",
-    title: "사라진 클립",
-    subtitle: "EP.01 낯선 번호",
+    title: "불륜",
+    subtitle: "EP.01 아내 몰래",
     synopsis:
       "자정에 도착한 3초짜리 영상. 마지막 프레임 속 번호가 사건을 시작한다.",
     durationSec: 58,

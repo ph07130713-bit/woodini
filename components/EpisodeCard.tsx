@@ -4,7 +4,7 @@ import type { Episode } from "../lib/types";
 export default function EpisodeCard({ episode }: { episode: Episode }) {
   return (
     <Link
-      href={`/player/${episode.id}`}
+      href={`/e/${episode.id}`}
       className="group block min-w-[160px] max-w-[220px]"
     >
       <div

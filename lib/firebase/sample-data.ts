@@ -3,7 +3,7 @@ import type { Episode, Series } from "./schema";
 export const sampleSeries: Series[] = [
   {
     id: "series-1",
-    title: "사라진 클립",
+    title: "불륜",
     summary: "3초짜리 영상이 불러온 미스터리",
     coverColor: "linear-gradient(140deg, #ff6b3d, #ffb64f)",
     category: "미스터리",
@@ -15,8 +15,8 @@ export const sampleEpisodes: Episode[] = [
   {
     id: "episode-1",
     seriesId: "series-1",
-    title: "사라진 클립",
-    subtitle: "EP.01 낯선 번호의 통화",
+    title: "불륜",
+    subtitle: "EP.01 아내 몰래",
     synopsis:
       "자정에 도착한 3초짜리 영상. 마지막 프레임 속 번호가 사건을 움직이기 시작한다.",
     durationSec: 58,
