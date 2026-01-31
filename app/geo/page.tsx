@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import { siteConfig, toAbsoluteUrl } from "../../lib/seo";
+import ShareBar from "../../components/ShareBar";
 
 export const metadata: Metadata = {
   title: "GEO 최적화 가이드",
@@ -188,6 +189,14 @@ export default function GeoPage() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="mt-10">
+          <ShareBar
+            title="GEO 최적화 가이드"
+            text="AI 검색에서 추천되는 GEO 전략을 한 페이지로 정리했습니다."
+            url={toAbsoluteUrl("/geo")}
+          />
         </div>
       </section>
     </main>

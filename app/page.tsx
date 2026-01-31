@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { landingHighlights } from "../lib/data/seed";
 import { siteConfig, toAbsoluteUrl } from "../lib/seo";
+import ShareBar from "../components/ShareBar";
 
 export const metadata: Metadata = {
   title: "선택형 숏드라마 MVP · GEO 최적화",
@@ -201,6 +202,14 @@ export default function LandingPage() {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="mt-10">
+          <ShareBar
+            title="선택형 숏드라마 MVP · GEO 최적화"
+            text="생성형 AI 검색에 최적화된 선택형 숏드라마 MVP와 GEO 전략을 공유해보세요."
+            url={toAbsoluteUrl("/")}
+          />
         </div>
       </section>
     </main>
