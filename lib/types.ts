@@ -12,6 +12,7 @@ export type Episode = {
   durationSec: number;
   tags: string[];
   poster: string;
+  videoSrc: string;
   choices: Choice[];
 };
 

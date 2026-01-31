@@ -80,7 +80,7 @@ export default function EpisodePlayerClient({
               autoPlay
               loop={false}
               poster="/poster.png"
-              src="/sample.mp4"
+              src={episode.videoSrc}
               aria-label={`${episode.title} 예고편 영상`}
               title={episode.title}
             />

@@ -18,6 +18,7 @@ export const episodes: Episode[] = [
     durationSec: 58,
     tags: ["미스터리", "스릴러", "1분"],
     poster: "bg-gradient-to-br from-orange-500 via-amber-400 to-yellow-300",
+    videoSrc: "/bulryun-short.mp4",
     choices: [
       { id: "call", label: "바로 전화를 건다", nextEpisodeId: "ep-2" },
       { id: "trace", label: "번호를 추적한다", nextEpisodeId: "ep-3" },
@@ -31,6 +32,7 @@ export const episodes: Episode[] = [
     durationSec: 62,
     tags: ["스릴러", "단서"],
     poster: "bg-gradient-to-br from-slate-700 via-slate-600 to-slate-500",
+    videoSrc: "/sample.mp4",
     choices: [
       { id: "stay", label: "통화를 유지한다", nextEpisodeId: "ep-4" },
       { id: "hang", label: "전화를 끊는다", nextEpisodeId: "ep-4" },
@@ -44,6 +46,7 @@ export const episodes: Episode[] = [
     durationSec: 59,
     tags: ["미스터리", "추적"],
     poster: "bg-gradient-to-br from-blue-600 via-cyan-500 to-emerald-400",
+    videoSrc: "/sample.mp4",
     choices: [
       { id: "enter", label: "서버에 접속한다", nextEpisodeId: "ep-4" },
       { id: "wait", label: "팀을 부른다", nextEpisodeId: "ep-4" },
@@ -57,6 +60,7 @@ export const episodes: Episode[] = [
     durationSec: 57,
     tags: ["스릴러", "속도"],
     poster: "bg-gradient-to-br from-fuchsia-600 via-purple-500 to-indigo-500",
+    videoSrc: "/sample.mp4",
     choices: [
       { id: "go", label: "좌표로 향한다", nextEpisodeId: "ep-1" },
       { id: "share", label: "좌표를 공유한다", nextEpisodeId: "ep-1" },
