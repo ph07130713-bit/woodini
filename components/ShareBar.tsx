@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Script from "next/script";
 
 declare global {
   interface Window {
@@ -103,6 +104,10 @@ export default function ShareBar({ title, text, url }: ShareBarProps) {
 
   return (
     <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+      <Script
+        src="https://static.addtoany.com/menu/page.js"
+        strategy="afterInteractive"
+      />
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
           <p className="text-sm font-semibold text-white">공유하기</p>
@@ -210,6 +215,23 @@ export default function ShareBar({ title, text, url }: ShareBarProps) {
         >
           링크 복사
         </button>
+      </div>
+
+      <div className="mt-6">
+        <div className="a2a_kit a2a_kit_size_32 a2a_default_style">
+          <a className="a2a_dd" href="https://www.addtoany.com/share"></a>
+          <a className="a2a_button_facebook"></a>
+          <a className="a2a_button_email"></a>
+          <a className="a2a_button_whatsapp"></a>
+          <a className="a2a_button_threads"></a>
+          <a className="a2a_button_google_gmail"></a>
+          <a className="a2a_button_telegram"></a>
+          <a className="a2a_button_kakao"></a>
+          <a className="a2a_button_line"></a>
+          <a className="a2a_button_twitter"></a>
+          <a className="a2a_button_x"></a>
+          <a className="a2a_button_linkedin"></a>
+        </div>
       </div>
     </div>
   );
